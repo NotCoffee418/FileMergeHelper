@@ -14,7 +14,8 @@ if (!File.Exists("config.json"))
 // Register operations
 OperationManager.RegisterOperationsBulk(
     new List<IOperation>() {
-        new ScheduleMerge()
+        new ScheduleMerge(),
+        new ClearCache()
     }
 );
 OperationManager.StartListening();
